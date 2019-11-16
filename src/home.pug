@@ -1,0 +1,12 @@
+extend pug/abstracts/base
+block headMixin
+    -
+        var siteTitle  = "eng Ayman Morsy",
+            desciption = "Frontend web developer self studied",
+            keywords   = "web designer,frontend,javascript developer",
+            author     = "Ayman Morsy",
+            searchEng  = false;
+    +head(siteTitle,desciption,keywords,author,searchEng)
+block mainContent
+    h1 this is home page2
+    +button('about.html',"about")
