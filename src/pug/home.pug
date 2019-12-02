@@ -1,0 +1,14 @@
+extend abstracts/base
+block headMixin
+    -
+        var siteTitle  = "eng Ayman Morsy",
+            desciption = "Frontend web developer self studied",
+            keywords   = "web designer,frontend,javascript developer",
+            author     = "Ayman Morsy",
+            searchEng  = false;
+    +head(siteTitle,desciption,keywords,author,searchEng)
+block mainContent
+    h1 this is home page2
+    p قامت جمهورية مصر العربية فى 6 من أكتوبر عام  1973 بعبور قناة السويس واقتحام خط برليف الحصين  و رفع العلم المصري على ارض سيناء بفضل بسالة الجنود المصريين الشجعان الذين بذلوا نفس تضحية وفداء 
+    p.bold مراحل تطور الضعف الجنسي
+    +button('about.html',"about")

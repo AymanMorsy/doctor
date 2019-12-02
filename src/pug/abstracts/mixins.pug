@@ -26,6 +26,8 @@ mixin head(siteTitle,desciption,keywords,author,searchEng)
     meta(property='og:image', content='')
     meta(property='og:type', content='website')
 
+    link(rel="stylesheet"  href='../assets/font-face.css')
+
     //- Favicons
     //- link(rel='apple-touch-icon', sizes='180x180', href='images/favicons/apple-touch-icon.png'))
     //- link(rel='icon', type='image/png', sizes='32x32', href=require('images/favicons/favicon-32x32.png'))
@@ -44,3 +46,11 @@ mixin head(siteTitle,desciption,keywords,author,searchEng)
     ######### button ########
 mixin button(link,inner)
     button: a(href= link) #{inner}
+
+
+//-
+    ######### SVG ########
+
+mixin svg(myclass,viewBox,path)
+    svg(class=myclass xmlns="http://www.w3.org/2000/svg" viewBox=viewBox)
+        path(d=path)

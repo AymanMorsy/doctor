@@ -1,12 +1,12 @@
 include mixins
 doctype html
-html
+html(lang='ar' dir='rtl')
     head
         block headMixin
     body
         header
-            include ../components/01-header
+            include ../layout/_header
         main
             block mainContent
         footer
-            include ../components/footer
+            include ../layout/_footer

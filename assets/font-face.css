@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Ayman Morsy";
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/sydaty-Medium.woff');
+}
+@font-face {
+    font-family: "Ayman Morsy bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/sydaty-bold.woff');
+}

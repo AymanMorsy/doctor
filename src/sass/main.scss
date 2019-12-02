@@ -1,18 +1,14 @@
-body{
-    padding: 5px;
-    margin: 0;
-    background-color: gray;
-    color:black;
-    user-select: none;
-    
-}
+// abstracts
+@import './abstracts/_vars';
+@import './abstracts/_func';
+@import './abstracts/_mixin';
 
-.flex{
-    display:flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    li{
-        margin: 5px;
-    }
-}
+// base
+@import './base/_fonts';
+@import './base/_base';
+
+// components
+@import './layout/_header';
+
+
+

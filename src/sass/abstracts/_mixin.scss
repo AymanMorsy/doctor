@@ -1,0 +1,9 @@
+// Rule sets will start with phone first 
+//  so the secound media should be tablet or larger
+
+@mixin tablet {
+    @media (min-width: 40em) {
+        @content;
+    }
+}
+

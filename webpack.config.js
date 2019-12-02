@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports={
+    
     module:{
         rules:[
             {
@@ -15,13 +16,33 @@ module.exports={
                 test:/\.(pug)$/,
                 loader:'pug-loader',
                 query:{
-                    pretty:true
+                    pretty:false
                 },
                 exclude:/node_modules/,
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, 
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, 
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    } 
+            ]
             },
             {
                 test:/\.(png|jpe?g|gif)$/i,
@@ -35,21 +56,34 @@ module.exports={
                     }
                 ]
             },
+            {
+                test:/\.(woff)$/i,
+                use:[
+                    {
+                        loader:'url-loader',
+                        options:{
+                            name: '[name].[ext]',
+                        }
+                    }
+                ]
+            },
         ]
     },
-
+    devtool:"source-map",
     plugins:[
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
-            template:'./src/home.pug',
+            template:'./src/pug/home.pug',
             filename: "index.html",
         }),
         new HTMLWebpackPlugin({
-            template:'./src/about.pug',
+            template:'./src/pug/about.pug',
             filename: "about.html",
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin()
 
     ],
 
 }
+
+// iexplore

@@ -1,0 +1,16 @@
+
+@function font($fontName){
+    // اتاكد من الاضافة الاخيره دي
+    //  format
+    @return url('../assets/fonts/'+$fontName) format('woff');
+}
+
+@function img($ImgName){
+    @return url('../assets/images/'+$ImgName) format('woff');
+}
+
+// css variable sorthand function
+
+@function v($var) {
+    @return var(--#{$var});
+  }

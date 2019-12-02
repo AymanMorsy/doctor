@@ -1,0 +1,27 @@
+
+//👇👇 SCSS Variables 👇👇//
+
+$themeClrMod:true;
+$light:(bkg:white,font-clr:black);
+$dark:(bkg:black,font-clr:white);
+// to get this variable list value use:
+// e.g >>>  color: map-get($dark,font-clr );
+
+@if $themeClrMod {
+    $themeClrMod: $light;
+}@else{
+    $themeClrMod: $dark;
+}
+
+// 🔴🔴 SCSS Variables  🔴🔴// 
+
+//👇👇 CSS Custom Variables 👇👇//
+
+:root{
+    box-sizing: border-box;
+    font-size:20px;
+    --primary:#00a3c8 ;
+}
+
+// 🔴🔴 CSS Custom Variables 🔴🔴 //
+
