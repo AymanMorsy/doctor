@@ -1,0 +1,25 @@
+.ticker {
+    position: fixed;
+    bottom:0;
+    right: 0    ;
+    white-space     : nowrap;
+    overflow        : hidden;
+    background-color: darkred;
+    color           : white;
+    .fixed {
+        background-color: darkred;
+        position        : relative;
+        z-index         : 1;
+        padding: 0  5px;
+    }
+}
+
+.ticker span:not(.fixed) {
+    position                 : relative;
+    display                  : inline-block;
+    left                     : -100vw;   
+    animation-name           : tikker;
+    animation-duration       : 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
