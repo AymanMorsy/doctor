@@ -2,8 +2,11 @@
 //  so the secound media should be tablet or larger
 
 @mixin tablet {
-    @media (min-width: 40em) {
+    @media (min-width: 768px) {
         @content;
     }
 }
+
+// How to use it
+// @include tablet {}
 
