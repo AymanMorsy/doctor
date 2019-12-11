@@ -4,12 +4,12 @@
 @import './abstracts/_mixin';
 
 // base
-@import './base/_fonts';
 @import './base/_base';
 
 // components
 @import './layout/_header';
-@import './components/news-ticker'
+@import './components/_nav';
+@import './components/_news-ticker';
 
 
 

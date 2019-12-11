@@ -1,4 +1,49 @@
-//- Mixins
+//- 
+    👇👇👇👇 button 👇👇👇👇
+mixin button(link,inner)
+    button: a(href= link) #{inner}
+
+    //- +button('about.html',"about") 
+
+
+//-
+    👇👇👇👇 SVG 👇👇👇👇
+
+mixin svg(myclass,viewBox,path)
+    svg(class=myclass xmlns="http://www.w3.org/2000/svg" viewBox=viewBox)
+        path(d=path)
+
+//- 
+    👇👇👇👇 Image 👇👇👇👇
+mixin img(im ,cls='')
+    img(class= cls src=require(`./../assets/images/${im}`).default)
+
+//- 
+    👇👇👇👇 ResponsiveImage 👇👇👇👇
+mixin imgR(im ,media,cls='')
+    img(class= cls sizes="(max-width: 1400px) 100vw, 1400px"
+        srcset=media
+        src=require(`./../assets/images/${im}`).default)
+//- 
+    🚨🚨🚨🚨 How to use imgR Mixin 🚨🚨🚨🚨
+                +imgR(
+                'woman_glasses_c_scale,w_1400.webp',
+                `imgs/woman_glasses_c_scale,w_200.webp 200w,
+                imgs/woman_glasses_c_scale,w_412.webp 412w,
+                imgs/woman_glasses_c_scale,w_573.webp 573w,
+                imgs/woman_glasses_c_scale,w_697.webp 697w,
+                imgs/woman_glasses_c_scale,w_831.webp 831w,
+                imgs/woman_glasses_c_scale,w_939.webp 939w,
+                imgs/woman_glasses_c_scale,w_1062.webp 1062w,
+                imgs/woman_glasses_c_scale,w_1170.webp 1170w,
+                imgs/woman_glasses_c_scale,w_1280.webp 1280w,
+                imgs/woman_glasses_c_scale,w_1380.webp 1380w,
+                imgs/woman_glasses_c_scale,w_1400.webp 1400w`
+                )
+
+
+
+//- Meta Tags
 mixin head(siteTitle,desciption,keywords,author,searchEng)
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -27,9 +72,11 @@ mixin head(siteTitle,desciption,keywords,author,searchEng)
     meta(property='og:type', content='website')
 
     link(rel="stylesheet"  href='../assets/font-face.css')
-
+    script.
+        const $ = document.querySelector.bind(document);
     //- Favicons
-    //- link(rel='apple-touch-icon', sizes='180x180', href='images/favicons/apple-touch-icon.png'))
+    link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="/favicon.ico" type="image/x-icon")
     //- link(rel='icon', type='image/png', sizes='32x32', href=require('images/favicons/favicon-32x32.png'))
     //- link(rel='icon', type='image/png', sizes='16x16', href=require('images/favicons/favicon-16x16.png'))
     //- link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
@@ -42,15 +89,3 @@ mixin head(siteTitle,desciption,keywords,author,searchEng)
     title= siteTitle
 
 
-//-
-    ######### button ########
-mixin button(link,inner)
-    button: a(href= link) #{inner}
-
-
-//-
-    ######### SVG ########
-
-mixin svg(myclass,viewBox,path)
-    svg(class=myclass xmlns="http://www.w3.org/2000/svg" viewBox=viewBox)
-        path(d=path)

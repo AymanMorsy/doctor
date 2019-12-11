@@ -33,7 +33,12 @@ module.exports={
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            plugins: function () { 
+                                return [
+                                  require('autoprefixer')
+                                ];
+                              }
                         }
                     }, 
                     {
@@ -45,9 +50,10 @@ module.exports={
             ]
             },
             {
-                test:/\.(png|jpe?g|gif)$/i,
+                test:/\.(png|jpe?g|gif|webp)$/i,
                 use:[
                     {
+                        // this loader for images in css or js
                         loader:'file-loader',
                         options:{
                             name:'[name].[ext]',
