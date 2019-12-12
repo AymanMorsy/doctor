@@ -1,13 +1,39 @@
 extend abstracts/base
 block headMixin
     -
-        var siteTitle  = "eng Ayman Morsy",
+        var siteTitle  = "دار الامومة 💕",
             desciption = "Frontend web developer self studied",
             keywords   = "web designer,frontend,javascript developer",
             author     = "Ayman Morsy",
             searchEng  = false;
     +head(siteTitle,desciption,keywords,author,searchEng)
 block mainContent
+    // Swiper
+    .swiper-container
+        .swiper-wrapper
+            .swiper-slide
+                +img('slider/1pc.jpg')
+            .swiper-slide
+                +img('slider/2pc.jpg')
+            .swiper-slide
+                +img('slider/3pc.jpg')
+            .swiper-slide
+                +img('slider/4pc.jpg')
+            .swiper-slide
+                +img('slider/5pc.jpg')
+            .swiper-slide
+                +img('slider/6pc.jpg')
+            .swiper-slide
+                +img('slider/7pc.jpg')
+            .swiper-slide
+                +img('slider/8pc.jpg')
+            .swiper-slide
+                +img('slider/9pc.jpg')
+        .swiper-pagination
+        // Add Arrows
+        .swiper-button-next
+        .swiper-button-prev
+        
     h1 this is home page2
     p قامت جمهورية مصر العربية فى 6 من أكتوبر عام  1973 بعبور قناة السويس واقتحام خط برليف الحصين  و رفع العلم المصري على ارض سيناء بفضل بسالة الجنود المصريين الشجعان الذين بذلوا نفس تضحية وفداء 
     p.bold مراحل تطور الضعف الجنسي

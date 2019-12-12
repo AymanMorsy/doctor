@@ -6,6 +6,7 @@
     overflow        : hidden;
     background-color: darkred;
     color           : white;
+    z-index: 1000;
     .fixed {
         background-color: darkred;
         position        : relative;
