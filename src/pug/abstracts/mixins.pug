@@ -20,10 +20,11 @@ mixin img(im ,cls='')
 
 //- 
     👇👇👇👇 ResponsiveImage 👇👇👇👇
-mixin imgR(im ,media,cls='')
-    img(class= cls sizes="(max-width: 1400px) 100vw, 1400px"
-        srcset=media
-        src=require(`./../assets/images/${im}`).default)
+mixin picture(im ,media,cls='')
+    picture
+        img(class= cls sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset=media
+            src=require(`./../assets/images/${im}`).default)
 //- 
     🚨🚨🚨🚨 How to use imgR Mixin 🚨🚨🚨🚨
                 +imgR(
