@@ -1,16 +1,17 @@
 // abstracts
-@import './abstracts/_vars';
-@import './abstracts/_func';
-@import './abstracts/_mixin';
+@import './abstracts/vars';
+@import './abstracts/func';
+@import './abstracts/mixin';
+@import './abstracts/zindex';
 
 // base
-@import './base/_base';
+@import './base/base';
 
 // components
-@import './layout/_header';
-@import './components/_nav';
-@import './components/_news-ticker';
-@import './vendors/_swiper';
+@import './layout/header';
+@import './components/nav';
+@import './components/news-ticker';
+@import './vendors/swiper';
 
 
 
