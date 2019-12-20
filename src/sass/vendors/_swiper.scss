@@ -4,6 +4,7 @@
   
   }
   .swiper-slide {
+    position: relative;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -25,4 +26,47 @@
     img{
       width:100%;
     }
+
+
   }
+
+$bkg-clr: #ffffff5d;
+
+  .slide-container{
+    position: absolute;
+    z-index: index($elements, slider);
+    width: 80%;
+    opacity: 0;
+    transition: opacity 350ms ease-in 100ms;
+    
+    h1{
+      background: $bkg-clr;
+      font-size: 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 350ms ease-in 500ms, transform 350ms ease-in 500ms;
+    }
+    p:nth-child(2){
+      background: $bkg-clr;
+      opacity: 0;
+      color:red;
+      transform: translateX(-50px);
+      transition: opacity 350ms ease-in 950ms, transform 350ms ease-in 950ms;
+
+    }
+  }
+  
+  
+  .swiper-slide-active  .slide-container{
+    opacity: 1;
+    transform: translateY(0px);
+    
+    h1{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    p:nth-child(2){
+      opacity: 1;
+      transform: translateX(0px);
+  } 
+}
