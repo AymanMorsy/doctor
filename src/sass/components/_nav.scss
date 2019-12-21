@@ -14,22 +14,34 @@ header {
 }
 
 .logo {
-    width      : 90px;
+    display:flex;
+    width      : 250px;
     height     : auto;
     text-align : center;
     line-height: 10px;
 
-    h1 {
-        font-size  : 11px;
-        margin     : 0;
-        color      : v(main-font-clr);
-        font-family: Arial, Helvetica, sans-serif;
+    &__sub {
+      h1{
+          margin: 0;
+          color: v(main-font-clr);
+          font-size: 19px;
+          letter-spacing: 0.5px;
+          margin-top: 16px;
+          
+      } 
+      h1:nth-child(2){
+        font-size: 12px;
+        margin-top: 10px;
+        letter-spacing: 1px;
+      }
     }
 
     img {
         width : 65px;
         height: auto;
     }
+
+
 }
 
 .ham {
@@ -145,6 +157,11 @@ nav li {
             width     : 18px;
             fill      : #6d6669;
             transition: transform 200ms;
+        }
+
+        &__phone a{
+            direction: ltr;
+            margin-top: -3px;
         }
 
     }
