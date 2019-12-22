@@ -27,19 +27,13 @@ mixin picture(im ,media,cls='')
             src=require(`./../assets/images/${im}`).default)
 //- 
     🚨🚨🚨🚨 How to use imgR Mixin 🚨🚨🚨🚨
-                +imgR(
-                'woman_glasses_c_scale,w_1400.webp',
-                `imgs/woman_glasses_c_scale,w_200.webp 200w,
-                imgs/woman_glasses_c_scale,w_412.webp 412w,
-                imgs/woman_glasses_c_scale,w_573.webp 573w,
-                imgs/woman_glasses_c_scale,w_697.webp 697w,
-                imgs/woman_glasses_c_scale,w_831.webp 831w,
-                imgs/woman_glasses_c_scale,w_939.webp 939w,
-                imgs/woman_glasses_c_scale,w_1062.webp 1062w,
-                imgs/woman_glasses_c_scale,w_1170.webp 1170w,
-                imgs/woman_glasses_c_scale,w_1280.webp 1280w,
-                imgs/woman_glasses_c_scale,w_1380.webp 1380w,
-                imgs/woman_glasses_c_scale,w_1400.webp 1400w`
+            +picture(
+                'slider/9pc_hvpesg_c_scale,w_1400.jpg', // لاحظ امتداد الصورة هنا فقط
+                    `imgs/9pc_hvpesg_c_scale,w_420.webp 420w,
+                    imgs/9pc_hvpesg_c_scale,w_720.webp 720w,
+                    imgs/9pc_hvpesg_c_scale,w_1014.webp 1014w,
+                    imgs/9pc_hvpesg_c_scale,w_1253.webp 1253w,
+                    imgs/9pc_hvpesg_c_scale,w_1400.webp 1400w`
                 )
 
 

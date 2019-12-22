@@ -9,9 +9,9 @@ pagination: {
 el: '.swiper-pagination',
 type: 'progressbar',
 },
-// autoplay: {
-//   delay: 3000,
-// },
+autoplay: {
+  delay: 2500,
+},
 navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -20,7 +20,7 @@ loop: true,
 });
 
 
-swiper.on('slideChange', function () {
-    // $('.swiper-slide h1').classList.remove("active")
-    $('.swiper-slide h1').classList.add("active")
-  });
+// swiper.on('slideChange', function () {
+//     // $('.swiper-slide h1').classList.remove("active")
+//     $('.swiper-slide h1').classList.add("active")
+//   });
