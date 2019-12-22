@@ -6,7 +6,7 @@
 }
 
 @function img($ImgName){
-    @return url('../assets/images/'+$ImgName) format('woff');
+    @return url('../assets/images/'+$ImgName);
 }
 
 // css variable sorthand function

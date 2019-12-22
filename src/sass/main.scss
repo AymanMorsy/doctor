@@ -6,12 +6,14 @@
 
 // base
 @import './base/base';
+@import './base/typography';
 
 // components
 @import './layout/header';
 @import './components/nav';
 @import './components/news-ticker';
 @import './vendors/swiper';
+@import './pages/home';
 
 
 

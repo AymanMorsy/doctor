@@ -1,0 +1,25 @@
+//👇👇 typography 👇👇//
+
+body {
+    font-family: "Ayman Morsy",serif;
+    font-size: calc(18px + .25vw);
+    line-height   : 1.5;
+    letter-spacing: 0.25px;
+    color: map-get($themeClrMod, font-clr);
+    background: {
+        color: map-get($themeClrMod, bkg);
+    }
+}
+
+p {
+    font-size: calc(0.75em + 0.15vw);
+    color: #3a3939;
+}
+
+h1 {
+    font-family: "Ayman Morsy bold";
+    font-size  : calc(1.3rem + 1.6vw);
+
+}
+
+// 🔴🔴 typography 🔴🔴 //

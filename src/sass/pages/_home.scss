@@ -1,0 +1,135 @@
+
+main{
+    padding: 0 8px;   
+}
+.about{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about__sub-container{
+    h3,p{
+        width: 100%;
+        text-align: center;
+
+    }
+    
+}
+
+
+
+@include tablet {
+    .about{
+
+        &__intro-container{
+            display:flex;
+
+            h1{
+                font-size  : calc(1.3rem / 2 + 1.6vw);
+                margin-top: 0;
+                
+            }
+            
+            .caption{
+                width:50%;
+            }
+            
+            figure{
+                margin-top: 10px;
+            }
+    
+
+        }
+
+        &__sub-container{
+            display:flex;
+            margin-top: 50px;
+            *{
+                width:calc(100% / 3); 
+                margin: 5px;
+                
+                p{
+                    text-align: right;
+                }
+            }
+        }
+        .image-hover-box {
+            margin-right: 10px;
+        }
+        }
+}
+
+
+
+
+
+// start styling about section // 
+/* Image hover CSS */
+.image-hover-box {
+    overflow: hidden;
+    /*   border: 1px solid red; */
+    max-width:600px;
+    margin: 0 auto;
+}
+figure{
+  padding: 0;
+  margin: 0;
+
+  img{
+      width: 100%;
+  }
+}
+
+.image-hover-box figure {
+    position: relative;
+
+}
+
+$hover-clr: rgb(255, 117, 237);
+.image-hover-box figure::before {
+    position: absolute;
+    top: 0;
+    left: -85%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba($hover-clr, 0) 0%, rgba($hover-clr, 0.2) 100%);
+    background: linear-gradient(to right, rgba($hover-clr, 0) 0%, rgba($hover-clr, 0.2) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.image-hover-box figure:hover::before {
+    -webkit-animation: shine 1.5s;
+    animation: shine 1.5s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+.image-hover-box figure img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.image-hover-box:hover figure img {
+    -ms-transform: scale(1.05); 
+    -webkit-transform: scale(1.05); 
+    transform: scale(1.05);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+

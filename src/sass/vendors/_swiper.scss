@@ -30,9 +30,10 @@
 
   }
 
-$bkg-clr: #ffffff5d;
+$bkg-clr: #0000005d;
 
   .slide-container{
+    color:white;
     position: absolute;
     z-index: index($elements, slider);
     width: 80%;
@@ -69,4 +70,19 @@ $bkg-clr: #ffffff5d;
       opacity: 1;
       transform: translateX(0px);
   } 
+  .caption-container{
+    // display:flex;
+
+    &__sub-caption{
+      margin: 5px;
+      display: flex;
+      
+      span{
+        display: inline-block;
+        margin: 5px;
+        background-color:$bkg-clr;
+      }
+    }
+
+  }
 }
