@@ -1,6 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 module.exports={
     
@@ -112,7 +113,12 @@ module.exports={
             template:'./src/pug/about.pug',
             filename: "about.html",
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new webpack.DefinePlugin({
+            // declaring global variable
+            $:eval(JSON.stringify('document.querySelector.bind(document)')),
+            $$:eval(JSON.stringify('document.querySelectorAll.bind(document)'))
+        })
 
     ],
 
