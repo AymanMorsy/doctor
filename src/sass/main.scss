@@ -3,16 +3,22 @@
 @import './abstracts/func';
 @import './abstracts/mixin';
 @import './abstracts/zindex';
+@import './vendors/font-awsome/scss/fontawesome.scss';
+// @import './vendors/font-awsome/scss/solid.scss';
+@import './vendors/font-awsome/scss/light.scss';
+@import './vendors/font-awsome/scss/brands.scss';
 
 // base
 @import './base/base';
 @import './base/typography';
+
 
 // components
 @import './layout/header';
 @import './components/nav';
 @import './components/news-ticker';
 @import './vendors/swiper';
+@import './layout/footer';
 @import './pages/home';
 
 

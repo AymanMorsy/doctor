@@ -1,0 +1,39 @@
+footer{
+    height: 400px;
+    border: 1px solid red;
+    background-color:#d33a67;
+
+    .footer__social-media {
+        display : flex;
+        // position: absolute;
+        // top     : 0;
+        // left    : 10px;
+
+        p span {
+            font-family     : Arial, Helvetica, sans-serif;
+            position        : relative;
+            background-color: #ec909e;
+            color           : #fbfbfb;
+            top             : -14px;
+            padding         : 0 5px;
+            border-radius   : 10px;
+            font-size       : 15px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 5px;
+
+            &:hover .icon {
+                fill     : #4b2c3b;
+                transform: translateY(-3px);
+            }
+        }
+
+        .icon {
+            width     : 18px;
+            fill      : #ffffff;
+            transition: transform 200ms;
+        }
+    }
+}

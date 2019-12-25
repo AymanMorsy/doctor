@@ -35,12 +35,15 @@ module.exports={
                         options: {
                             sourceMap: true,
                             plugins: function () { 
-                                return [
-                                  require('autoprefixer')
-                                ];
-                              }
+                            return [
+                                require('autoprefixer')
+                            ];
+                            }
                         }
-                    }, 
+                    },
+                    {
+                        loader: 'resolve-url-loader'
+                      }, 
                     {
                         loader: 'sass-loader',
                         options: {
@@ -86,7 +89,7 @@ module.exports={
                 ]
             },
             {
-                test:/\.(woff)$/i,
+                test:/\.(woff|ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/i,
                 use:[
                     {
                         loader:'url-loader',

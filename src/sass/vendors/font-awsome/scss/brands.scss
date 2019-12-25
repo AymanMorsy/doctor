@@ -1,0 +1,19 @@
+/*!
+ * Font Awesome Pro 5.12.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+@import 'variables';
+
+// 🚨🚨  لان ويباك يحول الخط الى بيز64 تم الغاء هذا الجزء  🚨🚨//
+// 🚨🚨  تم الغائه من البندل ويتم ادراج الخط بشكل عادي  🚨🚨//
+// @font-face {
+//   font-family: 'Font Awesome 5 Brands';
+//   font-style: normal;
+//   font-weight: normal;
+//   font-display: $fa-font-display;
+//   src: url('#{$fa-font-path}/fa-brands-400.woff') format('woff');
+// }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+}
