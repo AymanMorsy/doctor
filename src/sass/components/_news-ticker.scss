@@ -1,14 +1,15 @@
+$ticker-color:#674d06;
 .ticker {
     position: fixed;
     bottom:0;
     right: 0    ;
     white-space     : nowrap;
     overflow        : hidden;
-    background-color: darkred;
+    background-color: $ticker-color;
     color           : white;
     z-index: 1000;
     .fixed {
-        background-color: darkred;
+        background-color: $ticker-color;
         position        : relative;
         z-index         : 1;
         padding: 0  5px;

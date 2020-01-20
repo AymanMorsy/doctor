@@ -1,17 +1,19 @@
+$ticker-color:#674d06;
+
 header {
     box-shadow: 0px 3px 11px 1px #a2a1a1;
+    .container {
+        display         : flex;
+        justify-content : space-between;
+        background-color: v(primary);
+        padding         : 5px;
+    }
 }
-
 .social-media {
     display: none;
 }
 
-.container {
-    display         : flex;
-    justify-content : space-between;
-    background-color: v(primary);
-    padding         : 5px;
-}
+
 
 .logo {
     display:flex;
@@ -23,7 +25,7 @@ header {
     &__sub {
       h1{
           margin: 0;
-          color: v(main-font-clr);
+          color: $ticker-color;
           font-size: 19px;
           letter-spacing: 0.5px;
           margin-top: 16px;
@@ -75,16 +77,17 @@ header {
 // 👇👇👇👇 nav 👇👇👇👇 //
 
 nav {
-    position        : absolute;
-    left            : 0;
-    right           : 0;
+    position : absolute;
+    left  : 0;
+    right : 0;
     background-color: var(--primary);
-    margin-top      : 20px;
-    z-index         : -1;
+    margin-top : 20px;
+    visibility : hidden;
+    z-index: 2;
 }
 
 nav.active {
-    z-index: 2;
+    visibility : visible;
 }
 
 nav a {
@@ -146,6 +149,7 @@ nav li {
         a {
             display: inline-block;
             padding: 5px;
+            color: gray;
 
             &:hover .icon {
                 fill     : #4b2c3b;
@@ -164,13 +168,16 @@ nav li {
         opacity: 1;
     }
 
-    .container {
-        padding: 8px 50px;
+    header{
+        .container {
+            padding: 8px 50px;
+        }
     }
 
     nav {
         position  : static;
         margin-top: 25px;
+        visibility: visible;
 
         ul {
             display       : flex;

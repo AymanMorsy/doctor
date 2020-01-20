@@ -1,13 +1,20 @@
 $brand-clr: rgb(252, 98, 144);
+$ticker-color:#674d06;
 .about{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
-
+.about__intro-container{
+    p{
+        padding: 10px;
+    }
+}
 .about__sub-container{
+    margin: 30px 0 30px 0;
     h3,p{
         width: 100%;
         text-align: center;
+        
 
     }
     
@@ -72,6 +79,7 @@ h3,h2{
     /*   border: 1px solid red; */
     max-width:600px;
     margin: 0 auto;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
 }
 figure{
   padding: 0;
@@ -167,8 +175,9 @@ $height: 400px;
         text-align:center ;
 
         h3{
-            color: #828282;    
-            text-shadow: 1px 1px #ffffff;      
+            color: $ticker-color;    
+            text-shadow: 1px 1px #ffffff; 
+            margin-top: 20px;     
         }
         p{
             color:#fdfcfc;
@@ -209,6 +218,10 @@ $height: 400px;
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    h2{
+        margin-bottom:60px;
+    }
     
 
 }
@@ -221,12 +234,13 @@ overflow: hidden;
 margin: 10px;
 min-width: 230px;
 max-width: 360px;
-max-height: 220px;
+max-height: 240px;
 width: 100%;
 color: white;
 text-align: right;
 font-size: 16px;
 background-color: #000000;
+box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
 }
 .snip1401 * {
 -webkit-box-sizing: border-box;
@@ -325,10 +339,18 @@ transform: translateX(0);
 opacity: 1;
 }
 
+@include tablet-sm{
+    .snip1401 {
+        max-width: calc(100% / 2.4);
+    }
+}
 @include tablet{
     .services{
         &__container{
             width:99%;
         }
+    }
+    .snip1401 {
+        max-width: calc(100% / 3.2);
     }
 }

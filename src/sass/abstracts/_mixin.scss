@@ -6,6 +6,11 @@
         @content;
     }
 }
+@mixin tablet-sm {
+    @media (min-width: 500px) {
+        @content;
+    }
+}
 
 // How to use it
 // @include tablet {}

@@ -1,39 +1,188 @@
 footer{
-    height: 400px;
-    border: 1px solid red;
+    min-height: 400px;
     background-color:#d33a67;
+    padding: 20px;
+    padding-bottom: 30px;
 
-    .footer__social-media {
-        display : flex;
-        // position: absolute;
-        // top     : 0;
-        // left    : 10px;
+    hr{
+        $clr:#cccccc;
+        height: 1px;
+        color: $clr;
+        background-color: $clr;
+        border: none;
+    }
+}
+.footer__top{
+    .wrapper{
+        display: flex;
 
-        p span {
-            font-family     : Arial, Helvetica, sans-serif;
-            position        : relative;
-            background-color: #ec909e;
-            color           : #fbfbfb;
-            top             : -14px;
-            padding         : 0 5px;
-            border-radius   : 10px;
-            font-size       : 15px;
+    }
+    .container{
+        flex-grow: 1;
+
+
+        .sub{
+            display: flex;
+            color:white;
+            i{
+                font-size: 25px;
+                color:#674d06;
+            }
+            h6{
+                margin: 0  7px 0 10px;
+                font-size: 20px;
+                color:#674d06;
+            }
+            
         }
+        p{
+            margin: 10px 4px 5px 0;
+            color:#f1f1f1;
+            
+        }
+        &:last-child{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
+hr{
+    margin-bottom: 50px;
+}
 
-        a {
-            display: inline-block;
-            padding: 5px;
+// ✅✅✅ down part footer ✅✅✅// 
 
-            &:hover .icon {
-                fill     : #4b2c3b;
-                transform: translateY(-3px);
+.footer__container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 24px;
+
+    
+
+    .logo{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: center;
+        
+        img{
+            width: 100px;
+        }
+    }
+    
+    .logo__sub{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 24px;
+            color:#674d06;
+        }
+        & h1 + h1{
+            font-size: 15px;
+
+        }
+        p{
+            color:rgba(255, 255, 255, 0.815);
+        }
+    }
+
+    .social-container{
+        text-align: center;
+        width: 250px;
+
+        h6{
+            color:#674d06;
+        }
+    }
+    
+    .footer__social-media{
+        display:flex;
+        justify-content:center;
+
+        li{
+            padding: 10px;
+            transition: transform 200ms ease-in-out;
+            
+            a i{
+                font-size: 24px;
+              
+            }
+            &:hover{
+                transform: translateY(-5px);
             }
         }
 
-        .icon {
-            width     : 18px;
-            fill      : #ffffff;
-            transition: transform 200ms;
+        & li a{
+            color:rgba(255, 255, 255, 0.815);
+        }
+    }
+   
+}
+
+
+// ✅✅  article-fast-links ✅✅//
+
+.article-fast-links{
+    flex-grow: 1;
+    h4{
+        color:#674d06;
+
+        &::after{
+            content:'';
+            display:block;
+            width:20px;
+            height: 2px;
+            margin: 3px 0 20px 0;
+            background-color:rgba(255, 255, 255, 0.815);
+            // transform-origin: center;
+        }
+    }
+
+    li{
+
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #674d06;
+            
+        }
+        a{
+            color:rgba(255, 255, 255, 0.815);
+            font-size: 18px;
+        }
+    }
+}
+
+@include tablet{
+    .footer__top{
+            display: flex;
+
+            & .container:first-child{
+                flex-grow: 1;
+            }
+            .wrapper{
+                flex-grow: 2;
+
+            }
+    }
+    .footer__container{
+        .logo{
+            display:flex;
+            flex-direction:column;
+
+        }
+    }
+
+
+    .footer__container{
+        .logo{
+            width: initial;
+            margin-left: 50px;
         }
     }
 }

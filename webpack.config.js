@@ -44,7 +44,7 @@ module.exports={
                     },
                     {
                         loader: 'resolve-url-loader'
-                      }, 
+                    }, 
                     {
                         loader: 'sass-loader',
                         options: {
@@ -53,29 +53,29 @@ module.exports={
                     } 
             ]
             },
-            {
-                test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader, 
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }, 
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                            plugins: function () { 
-                                return [
-                                  require('autoprefixer')
-                                ];
-                              }
-                        }
-                    }, 
-            ]
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         MiniCssExtractPlugin.loader, 
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 sourceMap: true
+            //             }
+            //         }, 
+            //         {
+            //             loader: 'postcss-loader',
+            //             options: {
+            //                 sourceMap: true,
+            //                 plugins: function () { 
+            //                     return [
+            //                       require('autoprefixer')
+            //                     ];
+            //                   }
+            //             }
+            //         }, 
+            // ]
+            // },
             {
                 test:/\.(png|jpe?g|gif|webp)$/i,
                 use:[

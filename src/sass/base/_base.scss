@@ -7,52 +7,40 @@
 }
 
 body,
-ul {
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+{
     padding: 0;
     margin : 0;
 }
 
-ul,li {
+ul,
+li 
+{
     list-style-type: none;
 }
 
-a {
+a 
+{
     text-decoration: none;
 }
 
-main {
-    background-color: rgba(255, 255, 255, 0.85);;
+body{
+    background: url('../../assets/images/bg-f.png');
+}
+main 
+{
+    background:  rgba(255, 255, 255, 0.85);
+    padding-bottom: 100px;
+    
 }
 
 // 🔴🔴 Resets 🔴🔴 //
-
-
-//👇👇 typography 👇👇//
-
-body {
-    background-image: url('../../assets/images/bg-f.png');
-    font-family: "Ayman Morsy",serif;
-    font-size: calc(18px + .25vw);
-    line-height   : 1.5;
-    letter-spacing: 0.25px;
-    color: map-get($themeClrMod, font-clr);
-    background: {
-        color: map-get($themeClrMod, bkg);
-    }
-}
-
-p {
-    font-size: calc(0.8em + 0.15vw);
-}
-
-h1 {
-    font-family: "Ayman Morsy bold";
-    font-size  : calc(1.3rem + 1.6vw);
-
-}
-
-// 🔴🔴 typography 🔴🔴 //
-
 
 //👇👇 correct direction for phone numbers 👇👇//
 .ltr{

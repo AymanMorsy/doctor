@@ -1,0 +1,19 @@
+.who-we-are{
+    margin: 50px 10px;
+    text-align: center;
+
+    .list-title{
+        font-size:16px;
+        font-weight: bolder;
+        color:rgb(255, 0, 85);
+    }
+
+    ol{
+        text-align: right;
+        padding: 0;
+    }
+    li{
+        font-size: calc(0.67em + 0.15vw);
+        list-style-type: decimal;
+    }
+}
