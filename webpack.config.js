@@ -8,20 +8,28 @@ module.exports={
     module:{
         rules:[
             {
+                // using bable to transpile to es5 //
                 test:/.js$/,
-                use:['babel-loader'],
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:['@babel/preset-env']
+                    }
+                },
                 exclude:/node_modules/,
-
+                
             },
             {
+                // compile pugjs to HTML //
                 test:/\.(pug)$/,
                 loader:'pug-loader',
                 query:{
-                    pretty:false
+                    pretty:true
                 },
                 exclude:/node_modules/,
             },
             {
+                // compile SCSS to css //
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader, 
@@ -108,10 +116,12 @@ module.exports={
         new HTMLWebpackPlugin({
             template:'./src/pug/home.pug',
             filename: "index.html",
+            minify:false
         }),
         new HTMLWebpackPlugin({
             template:'./src/pug/about.pug',
             filename: "about.html",
+            minify:false
         }),
         new MiniCssExtractPlugin(),
         new webpack.DefinePlugin({
